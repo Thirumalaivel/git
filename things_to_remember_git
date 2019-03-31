@@ -1,0 +1,42 @@
+# Three tree architecture
+ Working area
+ Staging area
+ repository
+
+# HEADS - Variable Pointer to the current tip of the branch
+ -  Reference to the latest tip in the current branch
+ -  Files to know
+	- HEADS inside .git directory
+	- ref directory inside .git directory
+
+# Checksum 
+ - 40 character hexadecimal value used to address the commit
+ - It uses SHA_1 algorithm to create check sum to validate the integrity of the data
+ - It has some metadata attached like parent, author, commit message 
+
+# To see the changes between working and repository
+  - git diff
+
+# To see the changes between working and staging are
+  - git diff --staged
+
+# Nothing special with add and modify files
+
+# But always there are two ways in deleting and moving/renaming files
+# Like unix moving and renaming indicates the same in git.
+
+# Two ways in deleting
+ 1. - rm file
+    - git rm file
+    - git commit
+
+ 2. - git rm file - # This will delete the file and added it to staging
+    - git commit
+
+# Two ways in moving/renaming
+ 1. - mv file
+    - git mv file
+    - git commit
+
+ 2. - git mv file
+    - git commit
